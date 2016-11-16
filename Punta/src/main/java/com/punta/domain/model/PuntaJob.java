@@ -1,5 +1,7 @@
 package com.punta.domain.model;
 
+import com.punta.domain.model.base.AbstractModel;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -7,7 +9,7 @@ import java.util.List;
 /**
  * Created by Q on 09-Jul-16.
  */
-public class PuntaJob implements Serializable {
+public class PuntaJob extends AbstractModel implements Serializable {
 
     private long jobID;
     private String jobName;
