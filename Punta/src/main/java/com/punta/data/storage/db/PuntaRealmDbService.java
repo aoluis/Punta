@@ -14,6 +14,7 @@ import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
+import io.realm.exceptions.RealmException;
 import rx.Observable;
 
 /**
@@ -25,7 +26,13 @@ public class PuntaRealmDbService implements PuntaDatabaseAPI {
     private Realm realm;
 
     private PuntaRealmDbService() {
-        realm = Realm.getDefaultInstance();
+        try {
+            realm = Realm.getDefaultInstance();
+            AppLogger.d(realm.toString());
+        } catch (RealmException e) {
+            AppLogger.e(e.getMessage());
+        }
+
     }
 
     public static PuntaRealmDbService getInstance() {
