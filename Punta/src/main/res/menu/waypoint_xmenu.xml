@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/waypoint_xmenu_promote"
+        android:icon="@android:drawable/ic_menu_upload"
+        android:title="@string/xaction_promote_to_benchmark"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/waypoint_xmenu_search_bm"
+        android:title="@string/xaction_search_near_benchmarks"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/waypoint_xmenu_details"
+        android:title="@string/xaction_request_details"
+        app:showAsAction="never" />
+
+</menu>
